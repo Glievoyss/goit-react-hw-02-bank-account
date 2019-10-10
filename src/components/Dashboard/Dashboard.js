@@ -10,7 +10,6 @@ import TransactionHistory from '../TransactionHistory/TransactionHistory';
 toast.configure({
   autoClose: 3500,
   draggable: false,
-  // etc you get the idea
 });
 
 export default class Dashboard extends Component {
@@ -50,7 +49,6 @@ export default class Dashboard extends Component {
       transactions: [...state.transactions, newTransaction],
     }));
     setTimeout(this.updateState, 0.1);
-    // this.updateState();
   };
 
   updateState = () => {
@@ -91,7 +89,6 @@ export default class Dashboard extends Component {
   };
 
   render() {
-    // const { onDeposit, onWithdraw } = this;
     const { balance, income, expenses, transactions } = this.state;
     return (
       <div className={styles.dashboard}>
